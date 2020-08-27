@@ -4,9 +4,9 @@ contract arrayElementSum{
 
   /*
    * @dev Take note on memory loading. For the arugment [3,4], the free memory pointer
-   * which is 0x80 actually contains length of the _data array, to access array element 3,
+   * which is 0x80 actually contains length of the _data array, to access array index 0,  which is 3,
    * free memory pointer 0x80 needs to be increase by 32 bytes(0x20) and to access array
-   * element 4 free memory piotner 0x80 needs to icnrease by 64 bytes(0x40).
+   * element 1 which is 4, free memory pointer 0x80 needs to icnrease by 64 bytes(0x40).
    **/
 
   function arraySum(uint[] memory _data) public pure returns(uint sum) {
