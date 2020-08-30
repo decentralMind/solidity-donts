@@ -1,1 +1,1 @@
-Personal collection of Solidity anti-patterns for learning propose.
+Personal collection of Solidity files for reference.
