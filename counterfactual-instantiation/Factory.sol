@@ -1,7 +1,7 @@
 pragma solidity 0.6.0;
 
 contract Factory {
-    event Show(address ca, bytes32 encodeSalt);
+    event Show(address ca, bytes32 salt);
 
     function deploy(bytes memory bytecode, bytes32 salt) public {
         address addr;

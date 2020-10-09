@@ -1,15 +1,14 @@
 pragma solidity 0.6.0;
 
-interface fundManage {
+interface FundManage {
     function deposit() external payable returns(uint deposited);
     function withdraw() external  returns(bool);
     function getBalance() external view returns(uint);
 }
 
-contract WithdrawFund is fundManage {
+contract WithdrawFund is FundManage {
 
     receive() external payable {
-
     }
 
     function deposit() external payable override returns(uint deposited){
@@ -17,7 +16,6 @@ contract WithdrawFund is fundManage {
     }
 
     function withdraw() external override returns(bool) {
-        // address payable sender = msg.sender;
         msg.sender.transfer(address(this).balance);
     }
 
