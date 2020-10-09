@@ -19,3 +19,6 @@ function create2Address(creatorAddress, saltHex, byteCode) {
 
 const numToHex = numTo32BitHex(1);
 console.log(create2Address(ca, numToHex, accountBytecode));
+
+//Hasing the salt value
+console.log(create2Address(ca, web3.utils.soliditySha3(1), accountBytecode));
